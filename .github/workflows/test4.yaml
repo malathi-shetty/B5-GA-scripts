@@ -1,0 +1,26 @@
+name: File operations in github
+
+on: workflow_dispatch
+
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create a one file
+              run: echo "KK DEVOPS 123456" > devops4.txt
+
+            - name: display the content of a file
+              run: cat devops4.txt
+
+            - name: display the date
+              run: date
+            
+            - name: display files and dir 
+              run: ls -lrth
+
+            - name: dispaly the present location
+              run: pwd
+
+              
+            
+
