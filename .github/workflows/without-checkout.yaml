@@ -1,19 +1,17 @@
-name: validatiing wf without checkout
+name: validating wf without checkout
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
-    files:
-        runs-on: ubuntu-latest
-        steps:
+  files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the repo
+        uses: actions/checkout@v5
 
-            - name: display the content of a file
-              run: cat devops.txt
+      - name: display the content of a file
+        run: cat devops.txt
 
-            - name: display the date
-              run: date
-            
-
-            
-
-
+      - name: display the date
+        run: date
