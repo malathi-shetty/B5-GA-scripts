@@ -1,0 +1,19 @@
+name: validatiing wf without checkout
+
+on: push
+
+jobs:
+    files:
+        runs-on: ubuntu-latest
+        steps:
+
+            - name: display the content of a file
+              run: cat devops.txt
+
+            - name: display the date
+              run: date
+            
+
+            
+
+
