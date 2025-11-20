@@ -25,7 +25,7 @@ jobs:
       - name: Download artifact file
         uses: actions/download-artifact@v4
         with:
-          name: datafile
+          name: datafile123
 
       - name: Show file content
         run: cat data.txt
