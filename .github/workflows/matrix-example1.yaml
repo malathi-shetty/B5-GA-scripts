@@ -1,0 +1,16 @@
+name: Matrix Test
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on ubuntu-latest"
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on windows-latest"
