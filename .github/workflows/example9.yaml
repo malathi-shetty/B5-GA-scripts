@@ -1,0 +1,16 @@
+name: Docker Matrix
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        images: [hello-world, alpine]
+    steps:
+      - name: Docker details
+        run: docker info
+      - name: Run image
+        run: docker run ${{ matrix.images }}
