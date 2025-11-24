@@ -1,0 +1,16 @@
+name: OS and Node Matrix
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [16, 18]
+    steps:
+      - name: Show values
+        run: |
+          echo "OS = ${{ matrix.os }}"
+          echo "Node version = ${{ matrix.node }}"
