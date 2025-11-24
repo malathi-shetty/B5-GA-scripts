@@ -1,0 +1,16 @@
+name: Matrix with Exclude
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [14, 16, 18]
+        exclude:
+          - os: windows-latest
+            node: 18
+    steps:
+      - run: echo "$matrix.os $matrix.node"
