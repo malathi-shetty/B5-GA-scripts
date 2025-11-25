@@ -1,6 +1,7 @@
 name: Branch Based Deployment
 on:
   push:
+  workflow_dispatch:
 
 jobs:
 
@@ -8,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building application"
+      - run: echo "${{github.event_name}}
 
   deploy:
     runs-on: ubuntu-latest
