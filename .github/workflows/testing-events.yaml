@@ -1,0 +1,10 @@
+name: testing events1
+on:
+  push:
+    paths-ignore:
+      - README.md
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running CI"
